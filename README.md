@@ -1,27 +1,47 @@
-# React + TypeScript + Vite
+## 💻 Projeto Player
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esse projeto foi desenvolvido para trenar as minhas habilidades técnicas. Trata-se de um projeto frontend, o projeto consiste na parte frontend(React) em um Player de video usando os conceitos de Redux e Zustand
+  
 
-Currently, two official plugins are available:
+## 🎨 Layout
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![redux](https://github.com/Mraimundo/DT-Money/assets/53385345/f53d59a1-3f97-4135-ba1d-b29ffdbb8d69)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🥉: Tecnologias
 
-- Configure the top-level `parserOptions` property like this:
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+- [React](https://legacy.reactjs.org/docs/getting-started.html)
+- [Typescript](https://www.typescriptlang.org/docs/)
+- [Tailwind](https://tailwindcss.com/docs/installation)
+- [Axios](https://axios-http.com/docs/intro)
+- [radix-ui](https://www.radix-ui.com/docs/primitives/overview/introduction)
+- [vite](https://vitejs.dev/guide/)
+- [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started)
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+  
+  
+## :notebook: Executando
+
+O **README** mostra como executar as aplicação.
+
+```bash
+# Clone este repositório
+$ git clonegit@github.com:Mraimundo/react-redux-zustand.git
+
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd react-redux-zustand
+
+Como o projeto foi criado com o Vite, portanto depois de clonar o repositório digite em seu terminal:
+# Instale as dependências
+$ npm install ou yarn
+
+# Execute a aplicação
+$ npm run dev ou yarn dev
+
+$ em seguida localhost:3000 em seu navegador.
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Feito com horas em frente ao :computer: por [Mouzinho Raimundo](https://www.linkedin.com/in/mouzinho-raimundo/)
