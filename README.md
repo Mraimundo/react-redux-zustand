@@ -5,7 +5,7 @@ Esse projeto foi desenvolvido para trenar as minhas habilidades técnicas. Trata
 
 ## 🎨 Layout
 
-![redux](https://github.com/Mraimundo/DT-Money/assets/53385345/f53d59a1-3f97-4135-ba1d-b29ffdbb8d69)
+![layout-redux](https://github.com/Mraimundo/DT-Money/assets/53385345/b410ebb3-35c0-4de2-a7a1-0884a1d84049)
 
 
 ## 🥉: Tecnologias
