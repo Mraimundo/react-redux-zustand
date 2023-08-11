@@ -2,19 +2,26 @@ import { MessageCircle } from "lucide-react";
 import { Header } from "../components/Header";
 import { Module } from "../components/Module";
 import { Video } from "../components/Video";
-import { useAppSelector } from "../store";
-import { useCurrentLesson } from "../store/slices/player";
+import { useAppDispatch, useAppSelector } from "../store";
+import { loadCourse, useCurrentLesson } from "../store/slices/player";
 import { useEffect } from "react";
 
 export function Player() {
+  const dispatch = useAppDispatch();
   const modules = useAppSelector((state) => {
-    return state.player.course.modules;
+    return state.player.course?.modules;
   });
 
   const { currentLesson } = useCurrentLesson();
 
   useEffect(() => {
-    document.title = `${currentLesson.title}`;
+    dispatch(loadCourse());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (currentLesson) {
+      document.title = `${currentLesson.title}`;
+    }
   }, [currentLesson]);
 
   return (
@@ -32,16 +39,17 @@ export function Player() {
             <Video />
           </div>
           <aside className="w-80 absolute top-0 bottom-0 right-0 divide-y-2 divide-zinc-900 border-l border-zinc-800 bg-zinc-900 overflow-y-scroll scrollbar scrollbar-thin scrollbar-track-zinc-950 scrollbar-thumb-zinc-800">
-            {modules.map((module, index) => {
-              return (
-                <Module
-                  key={module.id}
-                  moduleIndex={index}
-                  title={module.title}
-                  amountOfLesson={module.lessons.length}
-                />
-              );
-            })}
+            {modules &&
+              modules.map((module, index) => {
+                return (
+                  <Module
+                    key={module.id}
+                    moduleIndex={index}
+                    title={module.title}
+                    amountOfLesson={module.lessons.length}
+                  />
+                );
+              })}
           </aside>
         </main>
       </div>
