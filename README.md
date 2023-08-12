@@ -1,6 +1,6 @@
 ## 💻 Projeto Player
 
-Esse projeto foi desenvolvido para trenar as minhas habilidades técnicas. Trata-se de um projeto frontend, o projeto consiste na parte frontend(React) em um Player de video usando os conceitos de Redux e Zustand
+Esse projeto foi desenvolvido para trenar as minhas habilidades técnicas. Trata-se de um projeto frontend, o projeto consiste na parte frontend(React) em um Player de video contendo modulos de aulas, usando os conceitos de Redux e Zustand
   
 
 ## 🎨 Layout
