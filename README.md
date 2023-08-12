@@ -20,15 +20,23 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [vite](https://vitejs.dev/guide/)
 - [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started)
 - [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+
+
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
   
   
 ## :notebook: Executando
 
-O **README** mostra como executar as aplicação.
+O **README** mostra como executar a aplicação.
 
 ```bash
 # Clone este repositório
-$ git clonegit@github.com:Mraimundo/react-redux-zustand.git
+$ git clone git@github.com:Mraimundo/react-redux-zustand.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd react-redux-zustand
@@ -44,4 +52,4 @@ $ em seguida localhost:3000 em seu navegador.
 
 ```
 
-Feito com horas em frente ao :computer: por [Mouzinho Raimundo](https://www.linkedin.com/in/mouzinho-raimundo/)
+Feito com horas em frente ao :computer: por [Mouzinho Raimundo](https://www.linkedin.com/in/mouzinho-raimundo/) 👋🏽 Entre em contato!
