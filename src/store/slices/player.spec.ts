@@ -7,7 +7,7 @@ const exampleState: PlayerState = {
     modules: [
       {
         id: 1,
-        title: "Iniciando com React",
+        title: "Primeiro passos com React",
         lessons: [
           {
             id: "SM3uwYgGxNE&t=3s",
