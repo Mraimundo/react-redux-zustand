@@ -1,9 +1,8 @@
 import { ChevronDown } from "lucide-react";
 import * as Collapsible from "@radix-ui/react-collapsible";
 import { Lesson } from "./Lesson";
-import { useAppDispatch, useAppSelector } from "../store";
-import { play } from "../store/slices/player";
 import { SkeletonScreen } from "./SkeletonScreen";
+import { useStore } from "../zustand-store";
 
 interface ModuleProps {
   moduleIndex: number;
@@ -12,22 +11,22 @@ interface ModuleProps {
 }
 
 export function Module({ moduleIndex, title, amountOfLesson }: ModuleProps) {
-  const dispatch = useAppDispatch();
+  const { lessons, currentLessonIndex, currentModuleIndex, play } = useStore(
+    (store) => {
+      return {
+        lessons: store.course?.modules[moduleIndex].lessons,
+        currentLessonIndex: store.currentLessonIndex,
+        currentModuleIndex: store.currentModuleIndex,
+        play: store.play,
+      };
+    }
+  );
 
-  const isCourseLoading = useAppSelector((state) => state.player.isLoading);
-
-  const { currentModuleIndex, currentLessonIndex } = useAppSelector((state) => {
-    const { currentModuleIndex, currentLessonIndex } = state.player;
-
-    return { currentModuleIndex, currentLessonIndex };
-  });
-  const lessons = useAppSelector((state) => {
-    return state.player.course?.modules[moduleIndex].lessons;
-  });
+  const isLoading = useStore((store) => store.isLoading);
 
   return (
     <>
-      {isCourseLoading ? (
+      {isLoading ? (
         <SkeletonScreen />
       ) : (
         <Collapsible.Root className="group" defaultOpen={moduleIndex === 0}>
@@ -55,7 +54,7 @@ export function Module({ moduleIndex, title, amountOfLesson }: ModuleProps) {
                       key={lesson.id}
                       title={lesson.title}
                       duration={lesson.duration}
-                      onPlay={() => dispatch(play([moduleIndex, lessonIndex]))}
+                      onPlay={() => play([moduleIndex, lessonIndex])}
                       isCurrent={isCurrent}
                     />
                   );
